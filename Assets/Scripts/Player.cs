@@ -18,7 +18,7 @@ public class Player : MonoBehaviour {
         float moveV = Input.GetAxis("Vertical");
 
         if (moveH == 0) moveH = Input.acceleration.x * 2;
-        if (moveV == 0) moveH = Input.acceleration.y * 2;
+        if (moveV == 0) moveV = Input.acceleration.y * 2;
 
 
         rb.AddForce(new Vector3(moveH * 5, 0.0f, moveV * 5));
